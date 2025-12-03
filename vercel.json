@@ -11,6 +11,10 @@
     {
       "source": "/proxy/reservas/:path*",
       "destination": "http://20.64.250.201:8082/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
