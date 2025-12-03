@@ -2,7 +2,7 @@
 import api from './api';
 
 // ⬅️ DEFINIR LA CONSTANTE QUE FALTA
-const EMPLEADO_API_BASE_URL = '/proxy/fonda/api/empleados'; // Puerto de reservaciones
+const EMPLEADO_API_BASE_URL = '/proxy/rseervas/api/empleados'; // Puerto de reservaciones
 
 export const listEmpleados = (filtro = '', filtroEstado = 'TODOS', filtroPuesto = 'TODOS') => {
     // Construye la URL con parámetros de consulta
