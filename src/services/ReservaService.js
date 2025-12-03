@@ -1,6 +1,6 @@
 import api from './api';
 
-const REST_API_BASE_URL = '/proxy/rervas/api/reservas';
+const REST_API_BASE_URL = '/proxy/reservas/api/reservas';
 
 export const crearReserva = (reservaDto) => api.post(REST_API_BASE_URL, reservaDto);
 export const listReservas = () => api.get(REST_API_BASE_URL);
