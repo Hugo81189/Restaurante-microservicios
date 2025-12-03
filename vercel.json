@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/proxy/auth/:path*",
+      "destination": "http://34.123.250.173:9000/:path*"
+    },
+    {
+      "source": "/proxy/fonda/:path*",
+      "destination": "http://34.28.6.17:8081/:path*"
+    },
+    {
+      "source": "/proxy/reservas/:path*",
+      "destination": "http://20.64.250.201:8082/:path*"
+    }
+  ]
+}

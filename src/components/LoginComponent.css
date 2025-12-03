@@ -1,0 +1,85 @@
+/* src/components/LoginComponent.css */
+.login-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.login-form-section {
+    width: 50%;
+    min-height: 100vh;
+    padding-top: 80px;
+    background-color: white;
+}
+
+.login-form-container {
+    max-width: 400px;
+    margin-left: 80px;
+}
+
+.login-card {
+    background: white;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.login-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(62, 103, 112, 0.1);
+}
+
+.login-title {
+    color: var(--color-primary) !important;
+}
+
+.login-btn {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.login-btn:hover:not(:disabled) {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(62, 103, 112, 0.3);
+}
+
+.login-btn:disabled {
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}
+
+.register-link {
+    color: var(--color-primary) !important;
+}
+
+.login-graphic-section {
+    width: 50%;
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arc-design {
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 400px;
+    background-color: white;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.graphic-content {
+    max-width: 300px;
+}
