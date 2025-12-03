@@ -1,6 +1,7 @@
 import api from './api';
 
-const REST_API_BASE_URL = '/proxy/fonda/api/tipo';
+const BASE_URL = import.meta.env.VITE_FONDA_URL;
+const REST_API_BASE_URL = `${BASE_URL}/api/tipo`;
 
 export const listTipos = () => api.get(REST_API_BASE_URL);
 export const crearTipo = (tipo) => api.post(REST_API_BASE_URL, tipo);

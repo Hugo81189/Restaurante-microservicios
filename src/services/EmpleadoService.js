@@ -2,7 +2,11 @@
 import api from './api';
 
 // ⬅️ DEFINIR LA CONSTANTE QUE FALTA
-const EMPLEADO_API_BASE_URL = '/proxy/reservas/api/empleados'; // Puerto de reservaciones
+// 1. Leemos la base (http://localhost:8082 o /proxy/reservas)
+const BASE_URL = import.meta.env.VITE_RESERVAS_URL;
+
+// 2. Construimos la ruta completa
+const EMPLEADO_API_BASE_URL = `${BASE_URL}/api/empleados`; // Puerto de reservaciones
 
 export const listEmpleados = (filtro = '', filtroEstado = 'TODOS', filtroPuesto = 'TODOS') => {
     // Construye la URL con parámetros de consulta

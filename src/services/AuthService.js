@@ -4,8 +4,9 @@ import { jwtDecode } from 'jwt-decode'; // Importación corregida
 import api from './api.js';
 
 // Apunta a tu auth-server
-const API_URL = '/proxy/auth/auth/'; 
-const API_MANAGEMENT_URL = '/proxy/auth/api/management/';
+const BASE_URL = import.meta.env.VITE_AUTH_URL;
+const API_URL = `${BASE_URL}/auth/`;
+const API_MANAGEMENT_URL = `${BASE_URL}/api/management/`;
 
 class AuthService {
 

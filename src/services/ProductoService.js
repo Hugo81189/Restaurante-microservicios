@@ -1,7 +1,10 @@
 import api from './api';
 
-export const BASE_URL = '/proxy/fonda';
-const REST_API_BASE_URL = '/proxy/fonda/api/producto';
+// Leemos la variable de entorno
+const BASE_URL = import.meta.env.VITE_FONDA_URL;
+// Exportamos la base para las imágenes en las tarjetas
+export const IMAGENES_URL = BASE_URL; 
+const REST_API_BASE_URL = `${BASE_URL}/api/producto`;
 
 
 export const listProductos = (filtroNombre = '', filtroTipoId = '', minPrice = '', maxPrice = '') => {
@@ -13,8 +16,7 @@ export const listProductos = (filtroNombre = '', filtroTipoId = '', minPrice = '
     if (minPrice) params.append('minPrice', minPrice);
     if (maxPrice) params.append('maxPrice', maxPrice);
 
-    const url = `${REST_API_BASE_URL}?${params.toString()}`;
-    return api.get(url);
+    return api.get(`${REST_API_BASE_URL}?${params.toString()}`);
 };
 export const crearProducto = (formData) =>
     api.post(REST_API_BASE_URL, formData, {

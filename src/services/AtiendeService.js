@@ -1,6 +1,7 @@
 import api from './api';
 
-    const ATIENDE_API_BASE_URL = '/proxy/reservas/api/atiende'; // Puerto de reservaciones
+const BASE_URL = import.meta.env.VITE_RESERVAS_URL;
+const ATIENDE_API_BASE_URL = `${BASE_URL}/api/atiende`; // Puerto de reservaciones
 
     export const createAtiende = (atiendeDto) => api.post(ATIENDE_API_BASE_URL, atiendeDto);
     export const getAtiendeById = (id) => api.get(`${ATIENDE_API_BASE_URL}/${id}`);

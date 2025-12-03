@@ -1,7 +1,8 @@
 import api from './api';
 
 
-const REST_API_BASE_URL = '/proxy/fonda/api/ventas';
+const BASE_URL = import.meta.env.VITE_FONDA_URL;
+const REST_API_BASE_URL = `${BASE_URL}/api/ventas`;
 
 export const crearVenta = (ventaDto) => api.post(REST_API_BASE_URL, ventaDto);
 export const listVentas = (

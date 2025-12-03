@@ -1,5 +1,6 @@
 import api from './api';
-const REST_API_BASE_URL = 'https://fabulous-success-production.up.railway.app/api/cliente';
+const BASE_URL = import.meta.env.VITE_RESTAURANTES_URL; 
+const REST_API_BASE_URL = `${BASE_URL}/api/cliente`;
 
 export const listClientes = (filtro = '', campoFiltro = 'nombre') => {
     const url = `${REST_API_BASE_URL}?filtro=${filtro}&campo=${campoFiltro}`;

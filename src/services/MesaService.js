@@ -1,6 +1,7 @@
 import api from './api';
 
-const REST_API_BASE_URL = '/proxy/reservas/api/mesa';
+const BASE_URL = import.meta.env.VITE_RESERVAS_URL;
+const REST_API_BASE_URL = `${BASE_URL}/api/mesa`;
 
 export const crearMesa = (mesaDto) => api.post(REST_API_BASE_URL, mesaDto);
 export const listMesas = () => api.get(REST_API_BASE_URL);
