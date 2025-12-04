@@ -1,6 +1,8 @@
 import React from "react";
 import { Tag, FileText, Pencil, Trash2, Image, DollarSign } from "lucide-react";
 
+export const BASE_URL = import.meta.env.VITE_FONDA_URL || 'http://localhost:8081';
+
 import { BASE_URL } from "../services/ProductoService";
 
 export function ProductoCard({ producto, nombreTipo, onEdit, onDelete }) {
