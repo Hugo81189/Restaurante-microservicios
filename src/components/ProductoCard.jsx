@@ -1,6 +1,8 @@
 import React from "react";
 import { Tag, FileText, Pencil, Trash2, Image, DollarSign } from "lucide-react";
 
+import { BASE_URL } from "../services/ProductoService";
+
 export function ProductoCard({ producto, nombreTipo, onEdit, onDelete }) {
     const formatPrice = (price) => {
         if (!price) return 'N/A';
@@ -17,7 +19,7 @@ export function ProductoCard({ producto, nombreTipo, onEdit, onDelete }) {
                 <div className="card-media-container">
                     {producto.urlImagen ? (
                         <img
-                            src={`http://34.28.6.17:8081/imagenes/${producto.urlImagen}`}
+                            src={`${BASE_URL}/imagenes/${producto.urlImagen}`}
                             alt={producto.nombre}
                             className="producto-imagen-listado"
                             loading="lazy"
