@@ -1,9 +1,10 @@
 import api from './api';
 
+export const BASE_URL = import.meta.env.VITE_FONDA_URL || 'http://localhost:8081';
+
 // Leemos la variable de entorno
 const BASE_URL = import.meta.env.VITE_FONDA_URL;
 // Exportamos la base para las imágenes en las tarjetas
-export const IMAGENES_URL = BASE_URL; 
 const REST_API_BASE_URL = `${BASE_URL}/api/producto`;
 
 
