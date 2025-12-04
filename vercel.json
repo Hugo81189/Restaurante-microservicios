@@ -14,7 +14,7 @@
     },
     {
       "source": "/proxy/restaurantes/:path*",
-      "destination": "https://fabulous-success-production.up.railway.app/:path*"
+      "destination": "https://sistema-restaurante.railway.internal/:path*"
     },
     {
       "source": "/(.*)",
