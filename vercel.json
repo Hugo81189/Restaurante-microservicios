@@ -13,6 +13,10 @@
       "destination": "http://20.64.250.201:8082/:path*"
     },
     {
+      "source": "/proxy/restaurantes/:path*",
+      "destination": "https://fabulous-success-production.up.railway.app/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
